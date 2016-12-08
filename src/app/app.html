@@ -1,0 +1,27 @@
+<main>
+  <h1 class="title">Twote</h1>
+
+  <br>
+  <br>
+  <br>
+
+  <form class="form-inline" style="width:100%" novalidate>
+  	<div class="form-group" style="width:60%">
+    	<label for="articleUrl">Enter your article URL</label>
+  		<input type="text" class="form-control" type="url" id="articleUrl" placeholder="http://example.com/my_article.html" style="width:80%" ng-model="ctrl.articleUrl">
+  	</div>
+  	<input class="btn btn-success" type="submit" ng-click="ctrl.get_sentences(ctrl.articleUrl)" value="Get sentences">
+  </form>
+
+  <div id="results" ng-if="ctrl.results.length">
+  	<h3>Twittable Sentences</h3>
+  	<p ng-repeat="sentence in ctrl.results">{{ sentence }}</p>
+
+  	<h3>Image proposed</h3>
+  	TODO
+  </div>
+
+</main>
+
+<footer>
+</footer>
